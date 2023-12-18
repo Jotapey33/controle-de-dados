@@ -44,7 +44,6 @@ export class LayoutComponent implements OnInit, AfterViewInit {
 
   searchOpen$ = this.layoutService.searchOpen$;
 
-  @ViewChild('quickpanel', { static: true }) quickpanel: MatSidenav;
   @ViewChild('sidenav', { static: true }) sidenav: MatSidenav;
   @ViewChild(MatSidenavContainer, { static: true }) sidenavContainer: MatSidenavContainer;
 
@@ -63,13 +62,6 @@ export class LayoutComponent implements OnInit, AfterViewInit {
       filter(matches => !matches),
       untilDestroyed(this)
     ).subscribe(() => this.layoutService.expandSidenav());
-
-    /**
-     * Open/Close Quickpanel through LayoutService
-     */
-    this.layoutService.quickpanelOpen$.pipe(
-      untilDestroyed(this)
-    ).subscribe(open => open ? this.quickpanel.open() : this.quickpanel.close());
 
     /**
      * Open/Close Sidenav through LayoutService

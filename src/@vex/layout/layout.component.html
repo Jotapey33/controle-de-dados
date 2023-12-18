@@ -25,13 +25,6 @@
       <ng-container *ngTemplateOutlet="sidenavRef"></ng-container>
     </mat-sidenav>
 
-    <mat-sidenav #quickpanel
-                 [fixedInViewport]="!(isDesktop$ | async)"
-                 class="quickpanel"
-                 mode="over"
-                 position="end">
-      <ng-container *ngTemplateOutlet="quickpanelRef"></ng-container>
-    </mat-sidenav>
 
     <mat-sidenav-content class="sidenav-content">
       <ng-container *ngTemplateOutlet="toolbarRef"></ng-container>

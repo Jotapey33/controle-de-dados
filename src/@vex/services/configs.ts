@@ -68,7 +68,7 @@ export const configs: Config[] = [
     name: 'Ikaros',
     imgSrc: '//vex-landing.visurel.com/assets/img/layouts/ikaros.png',
     layout: 'vertical',
-    boxed: true,
+    boxed: false,
     toolbar: {
       fixed: false
     },
